@@ -26,12 +26,14 @@ private:
    struct sockaddr_in servaddr = {0};
    
    // Socket descriptor
-   int sock;            
+   int sockFD;            
 
    /* Echo server address */
    struct sockaddr_in servAddr; 
    
-   unsigned short servPort;     /* Echo server port */
+   // Server Port
+   unsigned short servPort;
+   
    char *servIP;                    /* Server IP address (dotted quad) */
    char *echoString;                /* String to send to echo server */
    char echoBuffer[RCVBUFSIZE];     /* Buffer for echo string */
